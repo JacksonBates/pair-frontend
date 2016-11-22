@@ -4,7 +4,17 @@ import './App.css';
 import Campers from './Campers';
 
 class App extends Component {
-   
+
+  constructor() {
+    super();
+    this.state = { campers: [] };
+  }
+
+  componentWillMount() {
+    fetch('https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts')
+      .then(result => this.setState( { campers : result.json() }))
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,7 +23,7 @@ class App extends Component {
           <h3>{this.props.title}</h3>
         </div>
         <div>
-          {this.props.campers.map((camper, i) => <Campers camper={camper} key={i} />)}
+          {this.state.campers.map((camper, i) => <Campers camper={camper} key={i} />)}
         </div>
       </div>
     );
