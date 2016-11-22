@@ -5,6 +5,6 @@ import './index.css';
 // import data from './mock-data.js';
 
 ReactDOM.render(
-  <App title='Currently working on dumb components and slowly learning React!' />,
+  <App title='Fetching from API works! Now working on posting data :)' />,
   document.getElementById('root')
 );
