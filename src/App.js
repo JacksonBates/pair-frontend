@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Glyphicon, Modal } from 'react-bootstrap';
 
-// import logo from './logo.svg';
 import './App.css';
-import Campers from './Campers';
-
-// <img className='fcc-logo' src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo_transparent.png" alt="The Free Code Camp remote pairing board" />
-          
+import Campers from './Campers';          
 
 class App extends Component {
 
@@ -39,7 +35,7 @@ class App extends Component {
         <div className="App-header">
           <p><span className='header-text pull-left'>freeCodeCamp<i className="fa fa-free-code-camp" aria-hidden="true"></i> Remote Pairing Noticeboard</span></p>
         </div>
-        <div>
+        <div className='App-body'>
           <Modal show={this.state.showModal} onHide={this.close}>
             <Modal.Header>
               <Modal.Title>Hello</Modal.Title>
@@ -58,11 +54,11 @@ class App extends Component {
               </form>
             </Modal.Body>
           </Modal>
-          <Button className='circle-button' bsStyle="primary" bsSize="medium" onClick={this.open}>
+          <Button className='circle-button' bsStyle="primary" bsSize="large" onClick={this.open}>
             <Glyphicon glyph='plus' />
           </Button>
           <div className='row'>
-            {this.state.campers.map((camper, i) => <div className='col-xs-6 col-sm-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
+            {this.state.campers.map((camper, i) => <div key={i} className='col-xs-6 col-sm-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
           </div>
         </div>
       </div>

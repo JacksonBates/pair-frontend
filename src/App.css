@@ -9,7 +9,7 @@
   margin-bottom: 10px;
 }
 
-.circle-button {
+.App-body > .circle-button {
   border-radius: 50%;
   position: fixed;
   bottom: 50px;
@@ -17,11 +17,6 @@
   background-color: #7D0000 !important;
   border-color: #7D0000 !important;
   background-image: none !important;
-}
-
-.fcc-logo {
-  max-height: 40px;
-  vertical-align: -10px;
 }
 
 .header-text {
@@ -50,4 +45,42 @@
   .App-header {
     height: 10em;
   }
+}
+
+.user-card {
+  padding: 5px;
+  border: solid 2px black;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  height: 135px;
+  text-align: left;
+}
+
+.user-card > img {
+  position: relative;
+  float: left;
+}
+
+.user-card-name {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.user-card-interests {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+.user-card-setup {
+  margin-left: 5px;
+}
+
+.user-card > form > .circle-button {
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  background-color: #7D0000 !important;
+  border-color: #7D0000 !important;
+  background-image: none !important;
 }
