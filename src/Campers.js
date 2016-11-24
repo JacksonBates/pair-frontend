@@ -12,8 +12,9 @@ class Campers extends Component {
         <span className='user-card-interests'>{this.props.camper.interests}</span>
         <br />
         <span className='user-card-setup'>{this.props.camper.setup}</span>
-        <form action={'https://enigmatic-dawn-95873.herokuapp.com/api/v1/' + this.props.camper._id} method='delete'>
-          <Button className='circle-button' bsStyle="primary" bsSize="small">
+        <form action={'https://enigmatic-dawn-95873.herokuapp.com/api/v1/' + this.props.camper._id} id={this.props.camper._id} method='post'>
+          <input type='hidden' name='idToDelete' id='idToDelete' value={this.props.camper_id} />
+          <Button type='submit' className='circle-button' bsStyle="primary" bsSize="small">
             <Glyphicon glyph='trash' />
           </Button>
         </form>
