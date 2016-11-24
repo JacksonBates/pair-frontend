@@ -4,9 +4,19 @@
 
 .App-header {
   background-color: #006400;
-  height: 90px;
   padding: 5px;
   color: white;
+  margin-bottom: 10px;
+}
+
+.circle-button {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #7D0000 !important;
+  border-color: #7D0000 !important;
+  background-image: none !important;
 }
 
 .fcc-logo {
@@ -15,11 +25,29 @@
 }
 
 .header-text {
-  font-family: monospace;
+  font-family: saxmonoregular;
   font-size: xx-large;
   margin-left: 5px;
 }
 
 .profile-images {
   border-radius: 25%;
+}
+
+@media (min-width: 756px) {
+  .App-header {
+    height: 4em;
+  }
+}
+
+@media (max-width: 755px) {
+  .App-header {
+    height: 8em;
+  }
+}
+
+@media (max-width: 404px) {
+  .App-header {
+    height: 10em;
+  }
 }
