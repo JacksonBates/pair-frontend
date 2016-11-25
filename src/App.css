@@ -75,6 +75,10 @@
   margin-left: 5px;
 }
 
+.user-card-availability {
+  margin-left: 5px;
+}
+
 .user-card > form > .circle-button {
   border-radius: 50%;
   position: absolute;
