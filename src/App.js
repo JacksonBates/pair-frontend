@@ -58,7 +58,7 @@ class App extends Component {
             <Glyphicon glyph='plus' />
           </Button>
           <div className='row'>
-            {this.state.campers.map((camper, i) => <div key={i} className='col-xs-6 col-sm-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
+            {this.state.campers.map((camper, i) => <div key={i} className='col-xs-12 col-sm-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
           </div>
         </div>
       </div>
