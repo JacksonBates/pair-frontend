@@ -57,8 +57,10 @@ class App extends Component {
           <Button className='circle-button' bsStyle="primary" bsSize="large" onClick={this.open}>
             <Glyphicon glyph='plus' />
           </Button>
-          <div className='row'>
-            {this.state.campers.map((camper, i) => <div key={i} className='col-xs-12 col-sm-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
+          <div className='container'>
+            <div className='row'>
+              {this.state.campers.map((camper, i) => <div key={i} className='col-xs-12 col-md-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
+            </div>
           </div>
         </div>
       </div>
