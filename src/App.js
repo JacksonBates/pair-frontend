@@ -10,16 +10,21 @@ class App extends Component {
     super();
     this.state = { 
       campers: [],
-      showModal: false 
+      showModal: false,
+      showInfo: false 
     };
 
     this.close = () => {
-      this.setState({ showModal: false });
+      this.setState({ showModal: false, showInfo: false});
     };
 
     this.open = () => {
       this.setState({ showModal: true });
     };
+
+    this.openInfo = () => {
+      this.setState({ showInfo: true });
+    }
 }
   
 
@@ -36,9 +41,14 @@ class App extends Component {
           <p><span className='header-text pull-left'>freeCodeCamp<i className="fa fa-free-code-camp" aria-hidden="true"></i> Remote Pairing Noticeboard</span></p>
         </div>
         <div className='App-body'>
+          <div className='container'>
+            <div className='row'>
+              {this.state.campers.map((camper, i) => <div key={i} className='col-xs-6 col-md-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
+            </div>
+          </div>
           <Modal show={this.state.showModal} onHide={this.close}>
             <Modal.Header>
-              <Modal.Title>Hello</Modal.Title>
+              <Modal.Title>Add your details to the board</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <form action='https://enigmatic-dawn-95873.herokuapp.com/api/v1/add' method='post'>
@@ -54,14 +64,22 @@ class App extends Component {
               </form>
             </Modal.Body>
           </Modal>
-          <Button className='circle-button' bsStyle="primary" bsSize="large" onClick={this.open}>
-            <Glyphicon glyph='plus' />
+          <Modal show={this.state.showInfo} onHide={this.close}>
+            <Modal.Header>
+              <Modal.Title>About</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Info about the app...
+            </Modal.Body>
+          </Modal>
+        </div>
+        <div className='App-footer'>
+          <Button className='add-button' bsSize="small" onClick={this.open}>
+            <Glyphicon glyph='plus' /> Add
           </Button>
-          <div className='container'>
-            <div className='row'>
-              {this.state.campers.map((camper, i) => <div key={i} className='col-xs-12 col-md-4 col-lg-3'><Campers camper={camper} key={i} /></div>)}
-            </div>
-          </div>
+          <Button className='info-button' bsSize="small" onClick={this.openInfo}>
+            <Glyphicon glyph='info-sign' /> Info
+          </Button>
         </div>
       </div>
     );

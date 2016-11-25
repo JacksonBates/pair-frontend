@@ -9,20 +9,56 @@
   margin-bottom: 10px;
 }
 
-.App-body > .circle-button {
-  border-radius: 50%;
+.App-footer {
+  background-color: #006400;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: #7D0000 !important;
-  border-color: #7D0000 !important;
-  background-image: none !important;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+  margin-top: 10px;
 }
+
+.App-footer > .add-button {
+  background-color: #006400;
+  border-color: #006400;
+  color: white;
+  font-size: x-large;
+  -webkit-transition: background 5s;
+  transition: backgroup 5s;
+}
+
+.App-footer > .add-button:hover {
+  background-color: white;
+  border-color: white;
+  color: #006400;
+  font-size: x-large;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+.App-footer > .info-button {
+  background-color: #006400;
+  border-color: #006400;
+  color: white;
+  font-size: x-large;
+  -webkit-transition: background 5s;
+  transition: backgroup 5s;
+}
+
+.App-footer > .info-button:hover {
+  background-color: white;
+  border-color: white;
+  color: #006400;
+  font-size: x-large;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+
+
 
 .header-text {
   font-family: saxmonoregular;
-  font-size: xx-large;
-  margin-left: 5px;
 }
 
 .profile-images {
@@ -33,11 +69,19 @@
   .App-header {
     height: 4em;
   }
+  .header-text {
+    font-size: xx-large;
+    margin-left: 5px;
+  }
 }
 
 @media (max-width: 755px) {
   .App-header {
-    height: 8em;
+    height: 4em;
+  }
+  .header-text {
+    font-size: x-large;
+    margin-left: 5px;
   }
 }
 
@@ -49,7 +93,7 @@
 
 .user-card {
   padding: 5px;
-  border: solid 2px black;
+  /*border: solid 2px black;*/
   border-radius: 25px;
   margin-bottom: 5px;
   height: 135px;
@@ -84,7 +128,4 @@
   position: absolute;
   right: 30px;
   bottom: 10px;
-  background-color: #7D0000 !important;
-  border-color: #7D0000 !important;
-  background-image: none !important;
 }
