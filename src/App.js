@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { Button, Glyphicon, Modal } from 'react-bootstrap';
 
 import './App.css';
-import Campers from './Campers';          
+import Campers from './Campers';
 
 class App extends Component {
 
   constructor() {
     super();
-    this.state = { 
+    this.state = {
       campers: [],
       showModal: false,
-      showInfo: false 
+      showInfo: false
     };
 
     this.close = () => {
@@ -26,7 +26,7 @@ class App extends Component {
       this.setState({ showInfo: true });
     }
 }
-  
+
 
   componentWillMount() {
     fetch('https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts')
@@ -47,7 +47,7 @@ class App extends Component {
             </div>
           </div>
           <Modal show={this.state.showModal} onHide={this.close}>
-            <Modal.Header>
+            <Modal.Header closeButton>
               <Modal.Title>Add your details to the board</Modal.Title>
             </Modal.Header>
             <Modal.Body>
