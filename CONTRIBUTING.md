@@ -80,8 +80,10 @@ This should be done to check for updates on the remote repo:
   `git checkout master`
 + Merge changes from the original repo into your local `master` branch:  
   `git merge upstream/master`
++ Now push changes to your GitHub repo:  
+  `git push`
 
-Now your local repo is up to date with the original repo you forked from.
+Now your local repo and your GitHub repo is up to date with the original repo you forked from.
 
 ## Making real contributions
 
