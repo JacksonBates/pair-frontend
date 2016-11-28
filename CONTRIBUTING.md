@@ -43,6 +43,46 @@ To keep things beginner friendly, you can make a completely innocuous contributi
   + You may be required to make changes to your code before it gets pulled in to the master branch - have patience and know that the difficult bits are done.
 + Celebrate! Now you are ready to contribute to this project more meaningfully! Welcome aboard!
 
++ Now you can delete your local and remote branches:
+  + switch to `master` branch:  
+    `git checkout master`
+  + list all branches:  
+    `git branch`  
+    you should see `* master` and the second branch you created previously
+  + now delete that second branch:  
+    `git branch -d <name-of-the-branch>`
+  + delete second branch from your GitHub:  
+    `git push origin --delete <name-of-the-branch>`
+
+## How to sync your local repo with the original repo
+
+This setup should be done only once for the repo.  
+[source](https://help.github.com/articles/configuring-a-remote-for-a-fork/)  
+
++ List the current configured remote repository for your fork:  
+  `git remote -v`  
+  You should see two links with `origin` in front of them.  
+  The links will begin either with `https` or `git@`
++ Specify a new remote upstream repository that will be synced with the fork:  
+  `git remote add upstream https://github.com/JacksonBates/pair-frontend.git`  
+  or  
+  `git remote add upstream git@github.com:JacksonBates/pair-frontend.git`  
+  depending on which protocol you saw in the first step.
++ Verify the new upstream repository you've specified for your fork:  
+  `git remote -v`  
+  now you should see four links: two `origin` and two `upstream`
+
+This should be done to check for updates on the remote repo:  
+[source](https://help.github.com/articles/syncing-a-fork/)
++ Get data from original repo:  
+  `git fetch upstream`  
++ Switch to the `master` branch of your local repo:  
+  `git checkout master`
++ Merge changes from the original repo into your local `master` branch:  
+  `git merge upstream/master`
+
+Now your local repo is up to date with the original repo you forked from.
+
 ## Making real contributions
 
 If there is a particular issue you want to fix, communicate your intention via the comments on the specific issue. This will ensure that you are not working on something someone else is close to finishing, and also gives you the opportunity to discuss your approach and get any help or advice you may need before starting.
@@ -58,6 +98,3 @@ Please keep your commits and pull requests focused purely on the objectives disc
 ## Any questions?
 
 Could this CONTRIBUTING file be improved? Was anything inaccurate or unclear? Please open up an issue and suggest appropriate fixes. Good documentation is just as crucial as good code - so documentation contributions are just as valued as fancy code contributions!
-
-
-  
