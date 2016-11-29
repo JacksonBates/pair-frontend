@@ -71,7 +71,7 @@ class App extends Component {
             </Modal.Body>
           </Modal>
           <Modal show={this.state.showInfo} onHide={this.close}>
-            <Modal.Header>
+            <Modal.Header closeButton>
               <Modal.Title>About</Modal.Title>
             </Modal.Header>
             <Modal.Body>
