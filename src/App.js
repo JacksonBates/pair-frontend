@@ -32,6 +32,7 @@ class App extends Component {
     fetch('https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts')
       .then(result => result.json())
       .then(result => this.setState( { campers : result }))
+      .catch(e => console.error(e));
   }
 
   render() {
