@@ -5,5 +5,6 @@ import './index.css';
 // import data from './mock-data.js';
 
 ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );
