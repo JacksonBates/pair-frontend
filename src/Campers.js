@@ -4,7 +4,8 @@ import { Button, Glyphicon } from 'react-bootstrap';
 class Campers extends Component {
   constructor(props){
     super(props);
-    this.state = { end: new Date(this.props.camper.endTime).toTimeString()};
+    var date = new Date(this.props.camper.endTime).toTimeString();
+    this.state = { end: (date.substr(0,5) + ' ' + date.substr(9, date.length)) };
   }
   
   render() {
