@@ -12,7 +12,7 @@ class Campers extends Component {
     return (
       <div className='user-card'>
         <a href={'https://forum.freecodecamp.com/users/' + this.props.camper.username}>
-        <img className='profile-images' src={'https://forum.freecodecamp.com/user_avatar/forum.freecodecamp.com/' + this.props.camper.username + '/120/202_1.png'} alt={this.props.camper.username + '\'s profile image'} />
+        <img className='profile-images' height="120" width="120" src={'https://forum.freecodecamp.com/user_avatar/forum.freecodecamp.com/' + this.props.camper.username + '/120/202_1.png'} alt={this.props.camper.username + '\'s profile image'} />
         </a>
         <br />
         <span className='user-card-name'><a href={'https://forum.freecodecamp.com/users/' + this.props.camper.username}>{this.props.camper.username}</a></span>
