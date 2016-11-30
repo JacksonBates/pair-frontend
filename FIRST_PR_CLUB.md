@@ -3,4 +3,5 @@
 
 Oh, and: First!!!!!
 
+Hey, I hope that I understood right thing from what change in FIRST_PR_CLUB.md file from @Jackson's instructions. :) ???
 ---
