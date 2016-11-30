@@ -6,6 +6,8 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "qs": "^6.3.0",
     "react": "^15.4.0",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.0"
