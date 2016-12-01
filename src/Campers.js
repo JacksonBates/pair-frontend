@@ -5,7 +5,10 @@ class Campers extends Component {
   constructor(props){
     super(props);
     var date = new Date(this.props.camper.endTime).toTimeString();
-    this.state = { end: (date.substr(0,5) + ' ' + date.substr(9, date.length)) };
+    var setup = Array.from(this.props.camper.setup);
+    setup.splice(setup.length-1, 1); //to remove the extra comma
+    this.state = { end: (date.substr(0,5) + ' ' + date.substr(9, date.length)), 
+                   techSetup: setup.join(", ")};
   }
   
   render() {
@@ -19,7 +22,7 @@ class Campers extends Component {
         <br />
         <span className='user-card-interests'>{this.props.camper.interests}</span>
         <br />
-        <span className='user-card-setup'>{this.props.camper.setup}</span>
+        <span className='user-card-setup'>Preferred Pairing Technology(s): {this.state.techSetup}</span>
         <br />
         <span className='user-card-availability'>Available until: {this.state.end}</span>
         <form action={'https://enigmatic-dawn-95873.herokuapp.com/api/v1/' + this.props.camper._id} id={this.props.camper._id} method='post'>

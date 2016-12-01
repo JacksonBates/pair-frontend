@@ -63,8 +63,12 @@ class App extends Component {
                   <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" />
                   <span className="input-group-addon" id="basic-addon2">HH:mm</span>
                 </div>
-                <label htmlFor='setup'>Preferred setup:</label>
-                <input className='form-control' name='setup' id='setup' type='text' />
+                <label htmlFor='setup'>Preferred Pairing Technology:</label>
+                <p>ScreenHero <input name='setup' id='setup' type='checkbox' value="ScreenHero"/></p>
+                <p>TeamViewer <input name='setup' id='setup' type='checkbox' value="TeamViewer"/></p>
+                <p>GoogleHangouts <input name='setup' id='setup' type='checkbox' value="Google Hangouts"/></p>
+                <p>Skype <input name='setup' id='setup' type='checkbox' value="Skype"/></p>
+                Other: <input className='form-control' name='setup' id='setup' type='text'/>
                 <label htmlFor='interests'>Interests:</label>
                 <input className='form-control' name='interests' id='interests' type='text' />
                 <input className='btn btn-success modal-submit' type='submit' value='Submit' />
