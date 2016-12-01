@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Glyphicon, Modal } from 'react-bootstrap';
+import axios from 'axios';
+import qs from 'qs';
 
 import './App.css';
 import Campers from './Campers';
@@ -11,11 +13,22 @@ class App extends Component {
     this.state = {
       campers: [],
       showModal: false,
-      showInfo: false
+      showInfo: false,
+      username: '',
+      availableTime: '',
+      setup: '',
+      interests: ''
     };
 
     this.close = () => {
-      this.setState({ showModal: false, showInfo: false});
+      this.setState({
+        showModal: false,
+        showInfo: false,
+        username: '',
+        availableTime: '',
+        setup: '',
+        interests: ''
+      });
     };
 
     this.open = () => {
@@ -25,14 +38,61 @@ class App extends Component {
     this.openInfo = () => {
       this.setState({ showInfo: true });
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.fetchPosts = this.fetchPosts.bind(this);
 }
 
-
   componentWillMount() {
+    this.fetchPosts();
+  }
+
+  fetchPosts() {
     fetch('https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts')
       .then(result => result.json())
       .then(result => this.setState( { campers : result }))
       .catch(e => console.error(e));
+  }
+
+  // populate state with changes from input fields
+  handleChange(e) {
+    const key = e.target.name;
+    const value = e.target.value;
+    const newObj = {}
+    newObj[key] = value;
+    this.setState(newObj)
+  }
+
+  // handle POST request to API endpoint
+  handleSubmit(e) {
+    e.preventDefault();
+
+    const apiUrl = 'https://enigmatic-dawn-95873.herokuapp.com/api/v1/add';
+    const queryString = qs.stringify({
+      username: this.state.username,
+      availableTime: this.state.availableTime,
+      setup: this.state.setup,
+      interests: this.state.interest,
+    });
+
+    // Temp. while no CORS enabled on Backend
+    axios.post(apiUrl, queryString)
+      // .then(res => this.fetchPosts())
+      .then(res => res)
+      .catch(err => console.log(err));
+
+    this.setState({
+      showModal: false,
+      showInfo: false,
+      username: '',
+      availableTime: '',
+      setup: '',
+      interests: '',
+    });
+
+    // Temp. hack while no CORS enabled on Backend
+    setTimeout(this.fetchPosts, 0);
   }
 
   render() {
@@ -52,21 +112,21 @@ class App extends Component {
               <Modal.Title>Add your details to the board</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <form action='https://enigmatic-dawn-95873.herokuapp.com/api/v1/add' method='post'>
+              <form onSubmit={this.handleSubmit}>
                 <label htmlFor='username'>Forum username:</label>
                 <div className='input-group'>
                   <span className="input-group-addon" id="basic-addon1">@</span>
-                  <input className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" />
+                  <input className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" onChange={this.handleChange}/>
                 </div>
                 <label htmlFor='availableTime'>Available Time:</label>
                 <div className='input-group'>
-                  <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" />
+                  <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" onChange={this.handleChange}/>
                   <span className="input-group-addon" id="basic-addon2">HH:mm</span>
                 </div>
                 <label htmlFor='setup'>Preferred setup:</label>
-                <input className='form-control' name='setup' id='setup' type='text' />
+                <input className='form-control' name='setup' id='setup' type='text' onChange={this.handleChange}/>
                 <label htmlFor='interests'>Interests:</label>
-                <input className='form-control' name='interests' id='interests' type='text' />
+                <input className='form-control' name='interests' id='interests' type='text' onChange={this.handleChange}/>
                 <input className='btn btn-success modal-submit' type='submit' value='Submit' />
               </form>
             </Modal.Body>
