@@ -58,7 +58,7 @@ class App extends Component {
                   <span className="input-group-addon" id="basic-addon1">@</span>
                   <input className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" />
                 </div>
-                <label htmlFor='availableTime'>Available Time:</label>
+                <label htmlFor='availableTime'>Length of Time Available for Pairing (example: 03:00 = 3hrs):</label>
                 <div className='input-group'>
                   <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" />
                   <span className="input-group-addon" id="basic-addon2">HH:mm</span>
