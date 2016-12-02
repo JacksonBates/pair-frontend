@@ -20,8 +20,8 @@ class Campers extends Component {
         <div className='user-card-info'>
           <p className='user-card-name'><a href={'https://forum.freecodecamp.com/users/' + this.props.camper.username}>{this.props.camper.username}</a></p>
           <p className='user-card-interests'>{this.props.camper.interests}</p>
-          <p className='user-card-setup'>Preferred Pairing Technology(s): {this.state.techSetup}</p>
-          <p className='user-card-availability'>Available until: {this.state.end}</p>
+          <p className='user-card-setup'><b>Preferred Pairing Technology(s):</b> {this.state.techSetup}</p>
+          <p className='user-card-availability'><b>Available until:</b> {this.state.end}</p>
           <form action={'https://enigmatic-dawn-95873.herokuapp.com/api/v1/' + this.props.camper._id} id={this.props.camper._id} method='post'>
             <input type='hidden' name='idToDelete' id='idToDelete' value={this.props.camper_id} />
             <Button type='submit' className='circle-button' bsStyle="danger" bsSize="small">
