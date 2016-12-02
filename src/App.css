@@ -109,7 +109,7 @@
   /* position: relative; */
   /* float: left; */
   display: block;
-  margin: auto;
+  margin: auto 5px;
 }
 
 .user-card-info {
