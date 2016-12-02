@@ -7,6 +7,19 @@
   padding: 5px;
   color: white;
   margin-bottom: 10px;
+  height: 4em;
+}
+
+@media (max-width: 755px) {
+  .App-header {
+    height: 5em;
+  }
+}
+
+@media (max-width: 404px) {
+  .App-header {
+    height: 5.2em;
+  }
 }
 
 .App-footer {
@@ -56,40 +69,14 @@
 
 .header-text {
   font-family: saxmonoregular;
-}
-
-.profile-images {
-  border-radius: 25%;
-  vertical-align: baseline;
-}
-
-@media (min-width: 756px) {
-  .App-header {
-    height: 4em;
-  }
-  .header-text {
-    font-size: xx-large;
-    margin-left: 5px;
-  }
+  font-size: xx-large;
+  margin-left: 5px;
 }
 
 @media (max-width: 755px) {
-  .App-header {
-    height: 5em;
-  }
   .header-text {
     font-size: x-large;
     margin-left: 5px;
-  }
-}
-
-@media (max-width: 404px) {
-  .App-header {
-    height: 5.2em;
-  }
-  .profile-images {
-    height: 30%;
-    width: 30%;
   }
 }
 
@@ -100,47 +87,43 @@
   margin-bottom: 10px;
   text-align: left;
   background-color: #ddd;
-  min-height: 150px;
+  min-height: 200px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.user-card > a > img {
-  position: relative;
-  float: left;
+.user-card > a {
+  display: block;
+  margin: auto 5px;
+}
+
+.profile-images {
+  border-radius: 25%;
+  vertical-align: baseline;
+}
+
+@media (max-width: 404px) {
+  .profile-images {
+    height: 100%;
+    max-height: 120px;
+    width: 100%;
+    max-width: 120px;
+  }
+}
+
+.user-card-info {
+  margin: auto;
+  margin-left: 5px;
 }
 
 .user-card-name {
   font-weight: bold;
-  position: relative;
-  top: -20px;
-  margin-left: 5px;
 }
 
 .user-card-interests {
   font-style: italic;
-  margin-left: 5px;
-  position: relative;
-  top: -20px;
-}
-
-.user-card-setup {
-  margin-left: 5px;
-  position: relative;
-  top: -20px;
-}
-
-.user-card-availability {
-  margin-left: 5px;
-  position: relative;
-  top: -20px;
-}
-
-.user-card > form > .circle-button {
-  /*border-radius: 50%;*/
-  position: absolute;
-  margin: 0 auto;
-  bottom: 15px;
 }
 
 .modal-submit {
   margin-top: 5px;
-  }
+}
