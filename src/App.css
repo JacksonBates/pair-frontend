@@ -112,30 +112,16 @@
   margin: auto;
 }
 
+.user-card-info {
+  margin-left: 5px;
+}
+
 .user-card-name {
   font-weight: bold;
-  position: relative;
-  top: -20px;
-  margin-left: 5px;
 }
 
 .user-card-interests {
   font-style: italic;
-  margin-left: 5px;
-  position: relative;
-  top: -20px;
-}
-
-.user-card-setup {
-  margin-left: 5px;
-  position: relative;
-  top: -20px;
-}
-
-.user-card-availability {
-  margin-left: 5px;
-  position: relative;
-  top: -20px;
 }
 
 .user-card > form > .circle-button {
