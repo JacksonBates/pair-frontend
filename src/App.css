@@ -87,10 +87,10 @@
   .App-header {
     height: 5.2em;
   }
-  .profile-images {
-    height: 30%;
-    width: 30%;
-  }
+  /* .profile-images { */
+    /* height: 30%; */
+    /* width: 30%; */
+  /* } */
 }
 
 .user-card {
@@ -101,11 +101,15 @@
   text-align: left;
   background-color: #ddd;
   min-height: 150px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.user-card > a > img {
-  position: relative;
-  float: left;
+.user-card > a {
+  /* position: relative; */
+  /* float: left; */
+  display: block;
+  margin: auto;
 }
 
 .user-card-name {
