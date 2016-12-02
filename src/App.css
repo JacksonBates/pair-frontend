@@ -100,7 +100,7 @@
   margin-bottom: 10px;
   text-align: left;
   background-color: #ddd;
-  min-height: 150px;
+  min-height: 200px;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -113,6 +113,7 @@
 }
 
 .user-card-info {
+  margin: auto;
   margin-left: 5px;
 }
 
