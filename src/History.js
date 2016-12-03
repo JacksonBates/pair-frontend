@@ -27,7 +27,7 @@ export function withHash(WrappedComponent) {
       this.history = context.history;
 
       if (!this.history) {
-        throw new Error(`Could not find "history" is the context of ${displayName}. Wrap the root component in a <HistoryProvider`);
+        throw new Error(`Could not find "history" in the context of ${displayName}. Please wrap the root component in a <HistoryProvider>`);
       }
 
       this.state = {
