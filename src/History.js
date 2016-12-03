@@ -24,10 +24,17 @@ export function withHash(WrappedComponent) {
         this.history.replace({
           hash: newHash
         });
-        this.setState({
-          hash: newHash
-        });
       }
+    }
+    componentWillMount() {
+      this.unlisten = this.history.listen((location, action) => {
+        this.setState({
+          hash: location.hash,
+        });
+      });
+    }
+    componentWillUnmount() {
+      this.unlisten();
     }
     render() {
       return (
