@@ -3,6 +3,7 @@ import { Button, Glyphicon, Modal } from 'react-bootstrap';
 
 import './App.css';
 import Campers from './Campers';
+import { withHash } from './History';
 
 class App extends Component {
 
@@ -10,20 +11,18 @@ class App extends Component {
     super();
     this.state = {
       campers: [],
-      showModal: false,
-      showInfo: false
     };
 
     this.close = () => {
-      this.setState({ showModal: false, showInfo: false});
+      this.props.replaceHash('');
     };
 
     this.open = () => {
-      this.setState({ showModal: true });
+      this.props.replaceHash('#add');
     };
 
     this.openInfo = () => {
-      this.setState({ showInfo: true });
+      this.props.replaceHash('#info');
     }
 }
 
@@ -36,6 +35,8 @@ class App extends Component {
   }
 
   render() {
+    let showModal = this.props.hash === '#add';
+    let showInfo = this.props.hash === '#info';
     return (
       <div className="App">
         <div className="App-header">
@@ -47,7 +48,7 @@ class App extends Component {
               {this.state.campers.map((camper, i) => <div key={i} className='col-xs-12 col-md-6'><Campers camper={camper} key={i} /></div>)}
             </div>
           </div>
-          <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal show={showModal} onHide={this.close}>
             <Modal.Header closeButton>
               <Modal.Title>Add your details to the board</Modal.Title>
             </Modal.Header>
@@ -75,7 +76,7 @@ class App extends Component {
               </form>
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.showInfo} onHide={this.close}>
+          <Modal show={showInfo} onHide={this.close}>
             <Modal.Header closeButton>
               <Modal.Title>About</Modal.Title>
             </Modal.Header>
@@ -108,5 +109,9 @@ class App extends Component {
     );
   }
 }
+App.propTypes = {
+  hash: React.PropTypes.string.isRequired,
+  replaceHash: React.PropTypes.func.isRequired,
+}
 
-export default App;
+export default withHash(App);
