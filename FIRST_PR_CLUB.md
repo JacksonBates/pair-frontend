@@ -15,4 +15,8 @@ Oh, and: First!!!!!
 
 * my third try :) sorry.
 
+---
 
+* [MarcoThePoro](https://github.com/MarcoThePoro) :) Did all the exercises in front-end but can't get myself to stick to the projects. I'm from Melbourne. I've made a few PRs to a little atom plugin called less-than-slash. I want to add simple hash routing so the url reflects which modals are open.
+
+---
