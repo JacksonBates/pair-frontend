@@ -5,10 +5,10 @@ class Campers extends Component {
   constructor(props){
     super(props);
     var date = new Date(this.props.camper.endTime).toTimeString();
-    var setup = Array.from(this.props.camper.setup);
-    setup.splice(setup.length-1, 1); //to remove the extra comma
+    var setup = this.props.camper.setup;
+
     this.state = { end: (date.substr(0,5) + ' ' + date.substr(9, date.length)), 
-                   techSetup: setup.join(", ")};
+                   techSetup: Array.isArray(setup) ? setup.join(', ') : setup};
   }
   
   render() {
