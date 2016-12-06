@@ -10,6 +10,8 @@ The good news is, even the most beginner level contributor can feel right at hom
 
 + A GitHub account
 + Git installed on your system
++ Windows users should use `gitbash` as their terminal for working with Git.
++ Mac and Linux users can use any terminal they prefer.
 + A can-do attitude
 
 ## Getting started
@@ -21,9 +23,18 @@ The good news is, even the most beginner level contributor can feel right at hom
 
 To keep things beginner friendly, you can make a completely innocuous contribution first. You can add a comment to FIRST_PR_CLUB.md!
 
-+ On your fork of this repo, locate the FIRST_PR_CLUB markdown file. It's in the root folder.
++ On your forked verision of the repo on GitHub, click the green 'clone or download' button and copy the link.
+  + The link will look something like this: https://github.com/jacksonbates/pair-frontend.git (but with your username, not mine)
++ In the terminal write the following command to clone the repo. This will give you a local copy to work on:
+  + `git clone <paste-the-link-of-your-repo.git-here>`
+  + eg: `git clone https://github.com/jacksonbates/pair-frontend.git
++ In your terminal navigate to the folder that was just created.
+  + The command for this is `cd`
+  + eg: `cd pair-frontend`
++ If your version of the repo is ever out of sync with the original repo, i.e. there are new commits on the master branch of the original that you don't have, you need to sync your repo before adding your contributions. **See below, in the section called 'How to sync your local repo with the original repo' for details**
++ On your fork of this repo, locate the FIRST_PR_CLUB markdown file. It's in the root folder. Open it in your editor of choice (Atom, VS Code, Sublime, Vim, Notepad++...)
 + **Create a new branch to work on** (you'll do this for your real contributions, too).
-  + At the terminal, in the correct folder, run `git checkout -b <new-branch-name>`
+  + At the terminal, in the correct folder, run `git checkout -b <new-branch-name>` (read example below)
   + `<new-branch-name>` should be replaced with something sensible, like `jack-first-PR`
   + For your real contributions, you might choose a branch name like `issue-101` or `feature-info-modal`
   + All together: `git checkout -b jack-first-PR`
@@ -84,6 +95,7 @@ This should be done to check for updates on the remote repo:
   `git push`
 
 Now your local repo and your GitHub repo is up to date with the original repo you forked from.
+**You need to do this whenever you are about to work on the code - it means you are working on the most recent version of all the files and will limit the number of merge conflicts. (These are bad (for me, mostly).)**
 
 ## Making real contributions
 
