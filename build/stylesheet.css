@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'saxmonoregular';
+    src: url('saxmono-webfont.eot');
+    src: url('saxmono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('saxmono-webfont.woff') format('woff'),
+         url('saxmono-webfont.ttf') format('truetype'),
+         url('saxmono-webfont.svg#saxmonoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
