@@ -21,3 +21,6 @@ Oh, and: First!!!!!
 
 ---
 * Hi I am [Liam](https://github.com/liam345) . I have been doing free code camp projects in my free time. Have been doing the intermediate front end projects.
+
+---
+* [NathanGell](https://github.com/NathanGell) Hey everyone! I'm from Melbourne. I have been working through the FCC curriculum for a while now. Learning React at the moment. I'm also experimenting with the Web Audio API. I'd like to integrate a messaging system to connect the pairers. I'm keen to start contributing to some open source projects and this looks like the perfect one to pop my cherry!!
