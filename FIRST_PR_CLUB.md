@@ -20,3 +20,4 @@ Oh, and: First!!!!!
 * [MarcoThePoro](https://github.com/MarcoThePoro) :) Did all the exercises in front-end but can't get myself to stick to the projects. I'm from Melbourne. I've made a few PRs to a little atom plugin called less-than-slash. I want to add simple hash routing so the url reflects which modals are open.
 
 ---
+* Hi I am [Liam](https://github.com/liam345) . I have been doing free code camp projects in my free time. Have been doing the intermediate front end projects.
