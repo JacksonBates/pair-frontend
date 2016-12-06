@@ -22,8 +22,8 @@
   }
 }
 
-.App-body .row div:last-child {
-  margin-bottom: 2em;
+.App-body .row > div:last-child {
+  margin-bottom: 3em;
 }
 
 .App-footer {
