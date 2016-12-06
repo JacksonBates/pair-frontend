@@ -70,7 +70,10 @@
   -webkit-transition: background 1s;
   transition: background 1s;
 }
-
+.container.scroll-style{
+max-height:530px;
+overflow-y:scroll;
+}
 .header-text {
   font-family: saxmonoregular;
   font-size: xx-large;
