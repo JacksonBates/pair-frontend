@@ -22,6 +22,10 @@
   }
 }
 
+.App-body .row div:last-child {
+  margin-bottom: 2em;
+}
+
 .App-footer {
   background-color: #006400;
   position: fixed;

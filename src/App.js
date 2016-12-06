@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Glyphicon, Modal } from 'react-bootstrap';
+import axios from 'axios';
 
 import './App.css';
 import Campers from './Campers';
@@ -11,10 +12,20 @@ class App extends Component {
     super();
     this.state = {
       campers: [],
+      username: '',
+      availableTime: '',
+      setup: [],
+      interests: ''
     };
 
     this.close = () => {
       this.props.replaceHash('');
+      this.setState({
+        username: '',
+        availableTime: '',
+        setup: [],
+        interests: ''
+      });
     };
 
     this.open = () => {
@@ -24,14 +35,59 @@ class App extends Component {
     this.openInfo = () => {
       this.props.replaceHash('#info');
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.fetchData = this.fetchData.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 }
 
-
   componentWillMount() {
+    this.fetchData();
+  }
+
+  fetchData() {
     fetch('https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts')
       .then(result => result.json())
       .then(result => this.setState( { campers : result }))
       .catch(e => console.error(e));
+  }
+
+  handleChange(e) {
+    // Get checked checkboxes
+    if (e.target.name === 'setup[]') {
+      const inputs = document.getElementsByName('setup[]')
+      let setup = [];
+      // TODO: refactor
+      for (let i = 0, len = inputs.length; i < len; i++) {
+        if (inputs[i].checked) setup.push(inputs[i].value)
+      }
+      this.setState({
+        setup
+      });
+    } else {
+      this.setState({
+        [e.target.id]: e.target.value
+      });
+    }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const post = {
+      username: this.state.username,
+      availableTime: this.state.availableTime,
+      setup: this.state.setup,
+      interests: this.state.interests
+    }
+    const url = 'https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts';
+
+    axios.post(url, post).then(res => {
+      if (res.status === 201) {
+        // temporary solution, because API sends back nested data
+        this.fetchData();
+      }
+    }).catch(e => console.log(e))
+    this.close();
   }
 
   render() {
@@ -53,25 +109,29 @@ class App extends Component {
               <Modal.Title>Add your details to the board</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <form action='https://enigmatic-dawn-95873.herokuapp.com/api/v1/add' method='post'>
+              <form onSubmit={this.handleSubmit}>
                 <label htmlFor='username'>Forum username:</label>
                 <div className='input-group'>
                   <span className="input-group-addon" id="basic-addon1">@</span>
-                  <input className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" />
+                  <input className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" value={this.state.username} onChange={this.handleChange}/>
                 </div>
                 <label htmlFor='availableTime'>Length of Time Available for Pairing (example: 03:00 = 3hrs):</label>
                 <div className='input-group'>
-                  <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" />
+                  <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" value={this.state.availableTime} onChange={this.handleChange}/>
                   <span className="input-group-addon" id="basic-addon2">HH:mm</span>
                 </div>
-                <label htmlFor='setup'>Preferred Pairing Technology:</label>
-                <p>ScreenHero <input name='setup' id='setup' type='checkbox' value="ScreenHero"/></p>
-                <p>TeamViewer <input name='setup' id='setup' type='checkbox' value="TeamViewer"/></p>
-                <p>GoogleHangouts <input name='setup' id='setup' type='checkbox' value="Google Hangouts"/></p>
-                <p>Skype <input name='setup' id='setup' type='checkbox' value="Skype"/></p>
+
+                <fieldset>
+                  <legend htmlFor="setup[]">Preferred Pairing Technology:</legend>
+                  <p>ScreenHero <input name="setup[]" type="checkbox" value="ScreenHero" onChange={this.handleChange}/></p>
+                  <p>TeamViewer <input name="setup[]" type="checkbox" value="TeamViewer" onChange={this.handleChange}/></p>
+                  <p>GoogleHangouts <input name="setup[]" type="checkbox" value="GoogleHangouts" onChange={this.handleChange}/></p>
+                  <p>Skype <input name="setup[]" type="checkbox" value="Skype" onChange={this.handleChange}/></p>
+                </fieldset>
+
                 Other: <input className='form-control' name='setup' id='setup' type='text'/>
                 <label htmlFor='interests'>Interests:</label>
-                <input className='form-control' name='interests' id='interests' type='text' />
+                <input className='form-control' name='interests' id='interests' type='text' value={this.state.interests} onChange={this.handleChange}/>
                 <input className='btn btn-success modal-submit' type='submit' value='Submit' />
               </form>
             </Modal.Body>
