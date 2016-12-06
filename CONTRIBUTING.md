@@ -24,10 +24,10 @@ The good news is, even the most beginner level contributor can feel right at hom
 To keep things beginner friendly, you can make a completely innocuous contribution first. You can add a comment to FIRST_PR_CLUB.md!
 
 + On your forked verision of the repo on GitHub, click the green 'clone or download' button and copy the link.
-  + The link will look something like this: https://github.com/jacksonbates/pair-frontend.git (but with your username, not mine)
+  + The link will look something like this: `https://github.com/jacksonbates/pair-frontend.git` (but with your username, not mine)
 + In the terminal write the following command to clone the repo. This will give you a local copy to work on:
   + `git clone <paste-the-link-of-your-repo.git-here>`
-  + eg: `git clone https://github.com/jacksonbates/pair-frontend.git
+  + eg: `git clone https://github.com/jacksonbates/pair-frontend.git`
 + In your terminal navigate to the folder that was just created.
   + The command for this is `cd`
   + eg: `cd pair-frontend`
