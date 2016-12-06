@@ -43,7 +43,7 @@ class App extends Component {
           <p><span className='header-text pull-left'>freeCodeCamp<i className="fa fa-free-code-camp" aria-hidden="true"></i> Remote Pairing Noticeboard</span></p>
         </div>
         <div className='App-body'>
-          <div className='container'>
+          <div className='container scroll-style'>
             <div className='row'>
               {this.state.campers.map((camper, i) => <div key={i} className='col-xs-12 col-md-6'><Campers camper={camper} key={i} /></div>)}
             </div>
