@@ -5,6 +5,7 @@ import axios from 'axios';
 import './App.css';
 import Campers from './Campers';
 import { withHash } from './History';
+import server from './../config/config';
 
 class App extends Component {
 
@@ -46,7 +47,7 @@ class App extends Component {
   }
 
   fetchData() {
-    fetch('https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts')
+    fetch(`${server}/api/v1/posts`)
       .then(result => result.json())
       .then(result => this.setState( { campers : result }))
       .catch(e => console.error(e));
@@ -79,7 +80,7 @@ class App extends Component {
       setup: this.state.setup,
       interests: this.state.interests
     }
-    const url = 'https://enigmatic-dawn-95873.herokuapp.com/api/v1/posts';
+    const url = `${server}/api/v1/posts`;
 
     axios.post(url, post).then(res => {
       if (res.status === 201) {
