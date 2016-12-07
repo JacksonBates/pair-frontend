@@ -107,6 +107,8 @@ overflow-y:scroll;
 .profile-images {
   border-radius: 25%;
   vertical-align: baseline;
+  min-height:60px;
+  min-width:60px;
 }
 
 @media (max-width: 404px) {
