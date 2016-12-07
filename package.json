@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
