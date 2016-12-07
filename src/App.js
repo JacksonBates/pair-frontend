@@ -113,11 +113,11 @@ class App extends Component {
                 <label htmlFor='username'>Forum username:</label>
                 <div className='input-group'>
                   <span className="input-group-addon" id="basic-addon1">@</span>
-                  <input className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" value={this.state.username} onChange={this.handleChange}/>
+                  <input pattern=".{1,20}" required title="Username between 1 and 20 characters" className='form-control' name='username' id='username' type='text' aria-describedby="basic-addon1" value={this.state.username} onChange={this.handleChange}/>
                 </div>
                 <label htmlFor='availableTime'>Length of Time Available for Pairing (example: 03:00 = 3hrs):</label>
                 <div className='input-group'>
-                  <input className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" value={this.state.availableTime} onChange={this.handleChange}/>
+                  <input required title="Please enter in the format HH:mm" className='form-control' name='availableTime' id='availableTime' type='text' pattern='\d{1,2}:\d{2}' aria-describedby="basic-addon2" value={this.state.availableTime} onChange={this.handleChange}/>
                   <span className="input-group-addon" id="basic-addon2">HH:mm</span>
                 </div>
 
@@ -129,9 +129,9 @@ class App extends Component {
                   <p>Skype <input name="setup[]" type="checkbox" value="Skype" onChange={this.handleChange}/></p>
                 </fieldset>
 
-                Other: <input className='form-control' name='setup' id='setup' type='text'/>
+                Other: <input pattern=".{0}|.{1,30}" title="Keep it to minimum of 30 characters" className='form-control' name='setup' id='setup' type='text'/>
                 <label htmlFor='interests'>Interests:</label>
-                <input className='form-control' name='interests' id='interests' type='text' value={this.state.interests} onChange={this.handleChange}/>
+                <input pattern=".{0}|.{1,30}" title="Keep it to minimum of 30 characters" className='form-control' name='interests' id='interests' type='text' value={this.state.interests} onChange={this.handleChange}/>
                 <input className='btn btn-success modal-submit' type='submit' value='Submit' />
               </form>
             </Modal.Body>
