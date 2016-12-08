@@ -70,7 +70,10 @@
   -webkit-transition: background 1s;
   transition: background 1s;
 }
-
+.container.scroll-style{
+max-height:530px;
+overflow-y:scroll;
+}
 .header-text {
   font-family: saxmonoregular;
   font-size: xx-large;
@@ -104,6 +107,8 @@
 .profile-images {
   border-radius: 25%;
   vertical-align: baseline;
+  min-height:60px;
+  min-width:60px;
 }
 
 @media (max-width: 404px) {
