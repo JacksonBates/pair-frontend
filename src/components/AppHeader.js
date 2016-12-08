@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FccIcon from './FccIcon';
 import Header from './Header';
 
