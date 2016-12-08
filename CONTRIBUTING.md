@@ -16,6 +16,12 @@ The good news is, even the most beginner level contributor can feel right at hom
 + Mac and Linux users can use any terminal they prefer.
 + A can-do attitude
 
+## Prefer a screencast?
+
+If you would rather see this process in action first, we have a 10 minute screencast tutorial available on YouTube:
+
+[Your First GitHub Pull Request](https://www.youtube.com/watch?v=dSl_qnWO104)
+
 ## Getting started
 
 + Fork this repo before making any changes - you will be initially pushing commits to your fork, not this repo.
