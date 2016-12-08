@@ -5,7 +5,7 @@ import axios from 'axios';
 import './App.css';
 import Campers from './Campers';
 import { withHash } from './History';
-import server from './../config/config';
+import server from './config/config';
 
 class App extends Component {
 

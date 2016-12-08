@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Glyphicon } from 'react-bootstrap';
 import axios from 'axios';
 
-import server from './../config/config';
+import server from './config/config';
 
 class Campers extends Component {
   constructor(props){
