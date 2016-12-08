@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Button, Glyphicon, Modal } from 'react-bootstrap';
 import axios from 'axios';
 
+// Components
+import AppHeader from './components/AppHeader';
+import AppFooter from './components/AppFooter';
+
 import './App.css';
 import Campers from './Campers';
 import { withHash } from './History';
@@ -40,7 +44,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.fetchData = this.fetchData.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-}
+  }
 
   componentWillMount() {
     this.fetchData();
@@ -49,7 +53,9 @@ class App extends Component {
   fetchData() {
     fetch(`${server}/api/v1/posts`)
       .then(result => result.json())
-      .then(result => this.setState( { campers : result }))
+      .then(result => this.setState({
+        campers: result
+      }))
       .catch(e => console.error(e));
   }
 
@@ -60,7 +66,9 @@ class App extends Component {
       let setup = [];
       // TODO: refactor
       for (let i = 0, len = inputs.length; i < len; i++) {
-        if (inputs[i].checked) setup.push(inputs[i].value)
+        if (inputs[i].checked) {
+          setup.push(inputs[i].value)
+        }
       }
       this.setState({
         setup
@@ -96,9 +104,7 @@ class App extends Component {
     let showInfo = this.props.hash === '#info';
     return (
       <div className="App">
-        <div className="App-header">
-          <p><span className='header-text pull-left'>freeCodeCamp<i className="fa fa-free-code-camp" aria-hidden="true"></i> Remote Pairing Noticeboard</span></p>
-        </div>
+        <AppHeader headerText="freeCodeCamp" appName="Remote Pairing Noticeboard" />
         <div className='App-body'>
           <div className='container'>
             <div className='row'>
@@ -158,16 +164,9 @@ class App extends Component {
             </Modal.Body>
           </Modal>
         </div>
-        <div className='App-footer'>
-          <Button className='add-button' bsSize="small" onClick={this.open}>
-            <Glyphicon glyph='plus' /> Add
-          </Button>
-          <Button className='info-button' bsSize="small" onClick={this.openInfo}>
-            <Glyphicon glyph='info-sign' /> Info
-          </Button>
-        </div>
+        <AppFooter open={this.open.bind(this)} openInfo={this.openInfo.bind(this)} />
       </div>
-    );
+      );
   }
 }
 App.propTypes = {
