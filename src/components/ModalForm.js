@@ -12,6 +12,7 @@ const ModalForm = props => {
         <ModalSelectionList modalSelections={props.modalSelections}/>
         <AddModalTextInput name="setup" label="Other" value="" handleChange={props.handleChange} />
         <AddModalTextInput name="interests" label="Interests" value={props.interests} handleChange={props.handleChange} />
+        <input className='btn btn-success modal-submit' type='submit' value='Submit' />
       </form>
     );
 }
