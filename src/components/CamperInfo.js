@@ -8,7 +8,7 @@ const CamperInfo = props => {
       <p className='user-card-interests'>{props.interests}</p>
       <p className='user-card-setup'><b>Preferred Pairing Technology(s):</b> {props.techSetup}</p>
       <p className='user-card-availability'><b>Available until:</b> {props.end}</p>
-      <CamperDeleteButton handleSubmit={props.handleSubmit} camper_id={props.camper_id} />
+      <CamperDeleteButton handleSubmit={props.handleSubmit} handleDelete={props.handleDelete} camper_id={props.camper_id} />
     </div>
     );
 };

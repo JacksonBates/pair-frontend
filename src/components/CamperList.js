@@ -5,7 +5,7 @@ const CamperList = props => {
   return (
     <div className='container'>
       <div className='row'>
-        {props.campers.map((camper, i) => <CamperCard camper={camper} key={i} />)}
+        {props.campers.map((camper, i) => <CamperCard camper={camper} key={i} handleDelete={props.handleDelete}/>)}
       </div>
     </div>
     );
