@@ -21,4 +21,4 @@ Oh, and: First!!!!!
 
 ---
 
-* [Kenchung1996](https://github.com/kenchung1996) Hi everyone! Thanks for having me on this project, this is my first open-source project, 
+* [Kenchung1996](https://github.com/kenchung1996) Hi everyone! Thanks for having me on this cool project, this is my first open-source project and I'm excited to help out.
