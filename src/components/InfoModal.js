@@ -1,12 +1,11 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
+import AppModalHeader from './AppModalHeader';
 
 const InfoModal = props => {
   return (
     <Modal show={props.showInfo} onHide={props.close}>
-      <Modal.Header closeButton>
-        <Modal.Title>About</Modal.Title>
-      </Modal.Header>
+      <AppModalHeader title="About" />
       <Modal.Body>
         <p>This pair noticeboard in intended only for use by FCC Forum participants - it doesn't work without a valid forum account.</p>
         <p>This was made in response to the week long <a href='https://forum.freecodecamp.com/t/computer-frontend-web-development-challenge-november-16-to-26/55986'>front end challenge</a> organised by @P1xt.</p>
