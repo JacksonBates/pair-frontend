@@ -14,7 +14,9 @@ const AppBody = props => {
     handleChange={props.handleChange}
     username={props.username}
     availableTime={props.availableTime}
-    interests={props.interests} />
+    interests={props.interests}
+    modalSelections={props.modalSelections}
+     />
       <InfoModal showInfo={props.showInfo} close={props.close}/>
     </div>
     );

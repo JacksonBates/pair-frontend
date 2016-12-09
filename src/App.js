@@ -101,10 +101,11 @@ class App extends Component {
   render() {
     let showModal = this.props.hash === '#add';
     let showInfo = this.props.hash === '#info';
+    const pairingTechs = ["ScreenHero", "TeamViewer", "GoogleHangouts", "Skype"];
     return (
       <div className="App">
         <AppHeader headerText="freeCodeCamp" appName="Remote Pairing Noticeboard" />
-        <AppBody campers={this.state.campers} showModal={showModal} onHide={this.close} handleSubmit={this.handleSubmit} handleChange={this.handleChange} username={this.state.username} availableTime={this.state.availableTime} interests={this.state.interests} showInfo={showInfo} openInfo={this.openInfo} close={this.close} open={this.open} />
+        <AppBody campers={this.state.campers} showModal={showModal} onHide={this.close} handleSubmit={this.handleSubmit} handleChange={this.handleChange} username={this.state.username} availableTime={this.state.availableTime} interests={this.state.interests} showInfo={showInfo} openInfo={this.openInfo} close={this.close} open={this.open} modalSelections={pairingTechs}/>
         <AppFooter open={this.open} openInfo={this.openInfo} />
       </div>
       );
