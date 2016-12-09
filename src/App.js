@@ -81,7 +81,7 @@ class App extends Component {
   }
 
   handleDelete(id) {
-    console.log(id);
+//     console.log(id);
     const url = `${server}/api/v1/posts/${id}`;
 
     axios.delete(url).then(res => {
