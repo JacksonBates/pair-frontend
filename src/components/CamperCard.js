@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, Glyphicon } from 'react-bootstrap';
 import axios from 'axios';
 import CamperPhoto from './CamperPhoto';
 import CamperInfo from './CamperInfo';

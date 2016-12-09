@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Glyphicon } from 'react-bootstrap';
+import CamperDeleteButton from './CamperDeleteButton';
 
 const CamperInfo = props => {
   return (
