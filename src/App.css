@@ -1,133 +1,145 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-header {
-  background-color: #006400;
-  padding: 5px;
-  color: white;
-  margin-bottom: 10px;
-  height: 4em;
+    background-color: #006400;
+    padding: 5px;
+    color: white;
+    margin-bottom: 10px;
+    height: 4em;
 }
 
 @media (max-width: 755px) {
-  .App-header {
-    height: 5em;
-  }
+    .App-header {
+        height: 5em;
+    }
 }
 
 @media (max-width: 404px) {
-  .App-header {
-    height: 5.2em;
-  }
+    .App-header {
+        height: 5.2em;
+    }
 }
 
-.App-body .row > div:last-child {
-  margin-bottom: 3em;
+.App-body .row>div:last-child {
+    margin-bottom: 3em;
 }
 
 .App-footer {
-  background-color: #006400;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  color: white;
-  margin-top: 10px;
+    background-color: #006400;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    margin-top: 10px;
 }
 
-.App-footer > .add-button {
-  background-color: #006400;
-  border-color: #006400;
-  color: white;
-  font-size: x-large;
-  -webkit-transition: background 5s;
-  transition: backgroup 5s;
+.App-footer>.add-button {
+    background-color: #006400;
+    border-color: #006400;
+    color: white;
+    font-size: x-large;
+    -webkit-transition: background 5s;
+    transition: backgroup 5s;
 }
 
-.App-footer > .add-button:hover {
-  background-color: white;
-  border-color: white;
-  color: #006400;
-  font-size: x-large;
-  -webkit-transition: background 1s;
-  transition: background 1s;
+.App-footer>.add-button:hover {
+    background-color: white;
+    border-color: white;
+    color: #006400;
+    font-size: x-large;
+    -webkit-transition: background 1s;
+    transition: background 1s;
 }
 
-.App-footer > .info-button {
-  background-color: #006400;
-  border-color: #006400;
-  color: white;
-  font-size: x-large;
-  -webkit-transition: background 5s;
-  transition: backgroup 5s;
+.App-footer>.info-button {
+    background-color: #006400;
+    border-color: #006400;
+    color: white;
+    font-size: x-large;
+    -webkit-transition: background 5s;
+    transition: backgroup 5s;
 }
 
-.App-footer > .info-button:hover {
-  background-color: white;
-  border-color: white;
-  color: #006400;
-  font-size: x-large;
-  -webkit-transition: background 1s;
-  transition: background 1s;
+.App-footer>.info-button:hover {
+    background-color: white;
+    border-color: white;
+    color: #006400;
+    font-size: x-large;
+    -webkit-transition: background 1s;
+    transition: background 1s;
 }
 
 .header-text {
-  font-family: saxmonoregular;
-  font-size: xx-large;
-  margin-left: 5px;
+    font-family: saxmonoregular;
+    font-size: xx-large;
+    margin-left: 5px;
 }
 
 @media (max-width: 755px) {
-  .header-text {
-    font-size: x-large;
-    margin-left: 5px;
-  }
+    .header-text {
+        font-size: x-large;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (min-width: 286px) {
+    .inner-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
 }
 
 .user-card {
-  padding: 5px;
-  /*border: solid 2px black;*/
-  /*border-radius: 25px;*/
-  margin-bottom: 10px;
-  text-align: left;
-  background-color: #ddd;
-  min-height: 200px;
-  display: flex;
-  flex-flow: row nowrap;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    margin: .5rem;
+    text-align: left;
+    background-color: #ddd;
+    min-height: 200px;
 }
 
-.user-card > a {
-  display: block;
-  margin: auto 5px;
+@media (min-width: 1024px) {
+    .user-card {
+        flex: 1 1 48%;
+    }
+}
+
+.user-card>a {
+    display: block;
+    margin: auto 5px;
 }
 
 .profile-images {
-  border-radius: 25%;
-  vertical-align: baseline;
+    border-radius: 25%;
+    vertical-align: baseline;
 }
 
 @media (max-width: 404px) {
-  .profile-images {
-    height: 100%;
-    max-height: 120px;
-    width: 100%;
-    max-width: 120px;
-  }
+    .profile-images {
+        height: 100%;
+        max-height: 120px;
+        width: 100%;
+        max-width: 120px;
+    }
 }
 
 .user-card-info {
-  margin: auto;
-  margin-left: 5px;
+    margin: auto;
+    margin-left: 5px;
 }
 
 .user-card-name {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .user-card-interests {
-  font-style: italic;
+    font-style: italic;
 }
 
 .modal-submit {
-  margin-top: 5px;
+    margin-top: 5px;
 }
