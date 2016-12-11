@@ -22,7 +22,7 @@
   }
 }
 
-.App-body .row > div:last-child {
+.App-body .row>div:last-child {
   margin-bottom: 3em;
 }
 
@@ -32,10 +32,9 @@
   bottom: 0;
   width: 100%;
   color: white;
-  margin-top: 10px;
 }
 
-.App-footer > .add-button {
+.App-footer>.add-button {
   background-color: #006400;
   border-color: #006400;
   color: white;
@@ -44,7 +43,7 @@
   transition: backgroup 5s;
 }
 
-.App-footer > .add-button:hover {
+.App-footer>.add-button:hover {
   background-color: white;
   border-color: white;
   color: #006400;
@@ -53,7 +52,7 @@
   transition: background 1s;
 }
 
-.App-footer > .info-button {
+.App-footer>.info-button {
   background-color: #006400;
   border-color: #006400;
   color: white;
@@ -62,7 +61,7 @@
   transition: backgroup 5s;
 }
 
-.App-footer > .info-button:hover {
+.App-footer>.info-button:hover {
   background-color: white;
   border-color: white;
   color: #006400;
@@ -84,53 +83,56 @@
   }
 }
 
-@media screen and (min-width: 286px){
-    .inner-container{
+
+/*///////////////////////////////// USER CARDS //////////////////////////*/
+
+.container {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 286px) {
+  .inner-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: auto;
+    max-width: 1200px;
   }
 }
 
 .user-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   padding: .5rem;
   margin: .5rem;
   text-align: left;
-  background-color: #ddd;
-  min-height: 200px;
-
-}
-
-@media (min-width: 1024px){
-  .user-card{
-    flex: 1 1 48%;
-  }
-}
-
-.user-card > a {
-  display: block;
-  margin: auto 5px;
+  background-color: #FCFCFC;
+  flex: 1 1 48%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .profile-images {
-  border-radius: 25%;
-  vertical-align: baseline;
+  border-radius: 50%;
+  width: 120px;
+  margin: 0;
 }
 
-@media (max-width: 404px) {
-  .profile-images {
-    height: 100%;
-    max-height: 120px;
-    width: 100%;
-    max-width: 120px;
-  }
+.profile-images:hover {
+  z-index: 10;
+  animation: radiate 5s infinite;
+  position: relative;
 }
 
 .user-card-info {
   margin: auto;
-  margin-left: 5px;
+  padding: 2rem;
+  border-left: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .user-card-name {
@@ -141,6 +143,55 @@
   font-style: italic;
 }
 
+@media (min-width: 545px) {
+  .user-card {
+    flex: 0 1 48%;
+  }
+}
+
+@media (max-width: 850px) {
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-card-info {
+    text-align: center;
+    border: 0;
+    padding: .5rem;
+    min-height: 230px;
+  }
+  .user-card-name {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .profile-images {
+    margin: 1.5rem;
+  }
+}
+
+.user-card>a {
+  display: block;
+  margin: auto 5px;
+}
+
+
+/*///////////////////////////////// Modal Window //////////////////////////*/
+
 .modal-submit {
   margin-top: 5px;
+}
+
+
+/*///////////////////////////////// Animations //////////////////////////*/
+
+@keyframes radiate {
+  0% {
+    box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(00, 100, 00, 1), 0px 0px 0px 0px rgba(00, 100, 00, .7), 0px 0px 0px 0px rgba(00, 100, 00, .5);
+  }
+  100% {
+    box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.6), 0px 0px 0px 70px rgba(00, 100, 00, 0), 0px 0px 0px 200px rgba(00, 100, 00, 0), 0px 0px 0px 300px rgba(00, 100, 00, 0);
+  }
 }
