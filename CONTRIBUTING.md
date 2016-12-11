@@ -8,12 +8,12 @@ The good news is, even the most beginner level contributor can feel right at hom
 
 ## Table of Contents
 
-- [You will need](#You-will-need)
-- [Prefer a screencast?](#Prefer-a-screencast)
-- [Getting started](#Getting-started)
-- [Your first PR (Pull Request)](#Your-first-pr-pull-request)
-- [How to sync your local repo with the original repo](#How-to-sync-your-local-repo-with-the-original-repo)
-- [Making real contributions](#Making-real-contributions)
+- [You will need](#you-will-need)
+- [Prefer a screencast?](#prefer-a-screencast)
+- [Getting started](#getting-started)
+- [Your first PR (Pull Request)](#your-first-pr-pull-request)
+- [How to sync your local repo with the original repo](#how-to-sync-your-local-repo-with-the-original-repo)
+- [Making real contributions](#making-real-contributions)
 
 
 ## You will need
