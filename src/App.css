@@ -29,7 +29,7 @@
 .App-footer {
   background-color: #006400;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   color: white;
   margin-top: 10px;
@@ -84,16 +84,29 @@
   }
 }
 
+@media screen and (min-width: 286px){
+    .inner-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+
 .user-card {
-  padding: 5px;
-  /*border: solid 2px black;*/
-  /*border-radius: 25px;*/
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
+  margin: .5rem;
   text-align: left;
   background-color: #ddd;
   min-height: 200px;
-  display: flex;
-  flex-flow: row nowrap;
+
+}
+
+@media (min-width: 1024px){
+  .user-card{
+    flex: 1 1 48%;
+  }
 }
 
 .user-card > a {

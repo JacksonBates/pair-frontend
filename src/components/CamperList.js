@@ -4,7 +4,7 @@ import CamperCard from './CamperCard';
 const CamperList = props => {
   return (
     <div className='container'>
-      <div className='row'>
+      <div className='inner-container'>
         {props.campers.map((camper, i) => <CamperCard camper={camper} key={i} handleDelete={props.handleDelete}/>)}
       </div>
     </div>

@@ -39,7 +39,7 @@ class Campers extends Component {
       return null;
     } else {
       return (
-        <div className='user-card col-xs-12 col-md-6'>
+        <div className='user-card'>
           <CamperPhoto username={this.props.camper.username} />
           <CamperInfo username={this.props.camper.username} interests={this.props.camper.interests}
             techSetup={this.state.techSetup} end={this.state.end} handleSubmit={this.handleSubmit}
