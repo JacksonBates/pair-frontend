@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import io from 'socket.io-client';
 
 // Components
 import AppHeader from './components/AppHeader';
@@ -47,6 +48,10 @@ class App extends Component {
 
   componentWillMount() {
     this.fetchData();
+  }
+  
+  componentDidMount() {
+    this.socket = io(server);
   }
 
   fetchData() {
