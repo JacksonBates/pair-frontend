@@ -53,6 +53,12 @@ class App extends Component {
   
   componentDidMount() {
     this.socket = io(server);
+    this.socket.on( 'delete', id => {
+      this.fetchData();
+    });
+    this.socket.on( 'post', () => {
+      this.fetchData();
+    });
   }
 
   fetchData() {
@@ -95,6 +101,7 @@ class App extends Component {
         //   campers: this.state.campers.filter(camper => camper._id !== id)
         // });
         this.fetchData();
+        this.socket.emit( 'delete', id );
       }
     }).catch(e => console.log(e))
   }
@@ -113,6 +120,7 @@ class App extends Component {
       if (res.status === 201) {
         // temporary solution, because API sends back nested data
         this.fetchData();
+        this.socket.emit( 'post', res.body );
       }
     }).catch(e => console.log(e))
     this.close();
