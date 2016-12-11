@@ -1,197 +1,197 @@
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .App-header {
-    background-color: #006400;
-    padding: 5px;
-    color: white;
-    margin-bottom: 10px;
-    height: 4em;
+  background-color: #006400;
+  padding: 5px;
+  color: white;
+  margin-bottom: 10px;
+  height: 4em;
 }
 
 @media (max-width: 755px) {
-    .App-header {
-        height: 5em;
-    }
+  .App-header {
+    height: 5em;
+  }
 }
 
 @media (max-width: 404px) {
-    .App-header {
-        height: 5.2em;
-    }
+  .App-header {
+    height: 5.2em;
+  }
 }
 
 .App-body .row>div:last-child {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 .App-footer {
-    background-color: #006400;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: white;
+  background-color: #006400;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
 }
 
 .App-footer>.add-button {
-    background-color: #006400;
-    border-color: #006400;
-    color: white;
-    font-size: x-large;
-    -webkit-transition: background 5s;
-    transition: backgroup 5s;
+  background-color: #006400;
+  border-color: #006400;
+  color: white;
+  font-size: x-large;
+  -webkit-transition: background 5s;
+  transition: backgroup 5s;
 }
 
 .App-footer>.add-button:hover {
-    background-color: white;
-    border-color: white;
-    color: #006400;
-    font-size: x-large;
-    -webkit-transition: background 1s;
-    transition: background 1s;
+  background-color: white;
+  border-color: white;
+  color: #006400;
+  font-size: x-large;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 
 .App-footer>.info-button {
-    background-color: #006400;
-    border-color: #006400;
-    color: white;
-    font-size: x-large;
-    -webkit-transition: background 5s;
-    transition: backgroup 5s;
+  background-color: #006400;
+  border-color: #006400;
+  color: white;
+  font-size: x-large;
+  -webkit-transition: background 5s;
+  transition: backgroup 5s;
 }
 
 .App-footer>.info-button:hover {
-    background-color: white;
-    border-color: white;
-    color: #006400;
-    font-size: x-large;
-    -webkit-transition: background 1s;
-    transition: background 1s;
+  background-color: white;
+  border-color: white;
+  color: #006400;
+  font-size: x-large;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 
 .header-text {
-    font-family: saxmonoregular;
-    font-size: xx-large;
-    margin-left: 5px;
+  font-family: saxmonoregular;
+  font-size: xx-large;
+  margin-left: 5px;
 }
 
 @media (max-width: 755px) {
-    .header-text {
-        font-size: x-large;
-        margin-left: 5px;
-    }
+  .header-text {
+    font-size: x-large;
+    margin-left: 5px;
+  }
 }
 
 
 /*///////////////////////////////// USER CARDS //////////////////////////*/
 
 .container {
-    width: 100%;
-    margin-bottom: 5rem;
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
 @media screen and (min-width: 286px) {
-    .inner-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        margin: auto;
-        max-width: 1200px;
-    }
+  .inner-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: auto;
+    max-width: 1200px;
+  }
 }
 
 .user-card {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    padding: .5rem;
-    margin: .5rem;
-    text-align: left;
-    background-color: #FCFCFC;
-    flex: 1 1 48%;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
+  margin: .5rem;
+  text-align: left;
+  background-color: #FCFCFC;
+  flex: 1 1 48%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .profile-images {
-    border-radius: 50%;
-    width: 120px;
-    margin: 0;
+  border-radius: 50%;
+  width: 120px;
+  margin: 0;
 }
 
 .profile-images:hover {
-    z-index: 10;
-    animation: radiate 5s infinite;
-    position: relative;
+  z-index: 10;
+  animation: radiate 5s infinite;
+  position: relative;
 }
 
 .user-card-info {
-    margin: auto;
-    padding: 2rem;
-    border-left: 1px solid lightgrey;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  margin: auto;
+  padding: 2rem;
+  border-left: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .user-card-name {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .user-card-interests {
-    font-style: italic;
+  font-style: italic;
 }
 
 @media (min-width: 545px) {
-    .user-card {
-        flex: 0 1 48%;
-    }
+  .user-card {
+    flex: 0 1 48%;
+  }
 }
 
 @media (max-width: 850px) {
-    .user-card {
-        flex-direction: column;
-        align-items: center;
-    }
-    .user-card-info {
-        text-align: center;
-        border: 0;
-        padding: .5rem;
-        min-height: 230px;
-    }
-    .user-card-name {
-        padding-bottom: .5rem;
-        border-bottom: 1px solid lightgrey;
-    }
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-card-info {
+    text-align: center;
+    border: 0;
+    padding: .5rem;
+    min-height: 230px;
+  }
+  .user-card-name {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid lightgrey;
+  }
 }
 
 @media screen and (min-width: 1140px) {
-    .profile-images {
-        margin: 1.5rem;
-    }
+  .profile-images {
+    margin: 1.5rem;
+  }
 }
 
 .user-card>a {
-    display: block;
-    margin: auto 5px;
+  display: block;
+  margin: auto 5px;
 }
 
 
 /*///////////////////////////////// Modal Window //////////////////////////*/
 
 .modal-submit {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 
 /*///////////////////////////////// Animations //////////////////////////*/
 
 @keyframes radiate {
-    0% {
-        box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(00, 100, 00, 1), 0px 0px 0px 0px rgba(00, 100, 00, .7), 0px 0px 0px 0px rgba(00, 100, 00, .5);
-    }
-    100% {
-        box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.6), 0px 0px 0px 70px rgba(00, 100, 00, 0), 0px 0px 0px 200px rgba(00, 100, 00, 0), 0px 0px 0px 300px rgba(00, 100, 00, 0);
-    }
+  0% {
+    box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(00, 100, 00, 1), 0px 0px 0px 0px rgba(00, 100, 00, .7), 0px 0px 0px 0px rgba(00, 100, 00, .5);
+  }
+  100% {
+    box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.6), 0px 0px 0px 70px rgba(00, 100, 00, 0), 0px 0px 0px 200px rgba(00, 100, 00, 0), 0px 0px 0px 300px rgba(00, 100, 00, 0);
+  }
 }
