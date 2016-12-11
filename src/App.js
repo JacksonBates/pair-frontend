@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import io from 'socket.io-client';
 
 // Components
 import AppHeader from './components/AppHeader';
@@ -49,6 +50,16 @@ class App extends Component {
   componentWillMount() {
     this.fetchData();
   }
+  
+  componentDidMount() {
+    this.socket = io(server);
+    this.socket.on( 'delete', id => {
+      this.fetchData();
+    });
+    this.socket.on( 'post', () => {
+      this.fetchData();
+    });
+  }
 
   fetchData() {
     fetch(`${server}/api/v1/posts`)
@@ -90,6 +101,7 @@ class App extends Component {
         //   campers: this.state.campers.filter(camper => camper._id !== id)
         // });
         this.fetchData();
+        this.socket.emit( 'delete', id );
       }
     }).catch(e => console.log(e))
   }
@@ -108,6 +120,7 @@ class App extends Component {
       if (res.status === 201) {
         // temporary solution, because API sends back nested data
         this.fetchData();
+        this.socket.emit( 'post', res.body );
       }
     }).catch(e => console.log(e))
     this.close();
