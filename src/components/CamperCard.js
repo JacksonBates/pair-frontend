@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import CamperPhoto from './CamperPhoto';
 import CamperInfo from './CamperInfo';
-import server from '../config/config';
+// import server from '../config/config';
 
 class Campers extends Component {
   constructor(props) {
@@ -17,22 +17,22 @@ class Campers extends Component {
       display: true
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const url = server + '/api/v1/posts/' + this.props.camper._id;
-
-    axios.delete(url).then(res => {
-      if (res.status === 204) {
-        // remove this from DOM without a refresh...
-        this.setState({
-          display: false
-        });
-      }
-    }).catch(e => console.log(e))
-  }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   const url = server + '/api/v1/posts/' + this.props.camper._id;
+  //
+  //   axios.delete(url).then(res => {
+  //     if (res.status === 204) {
+  //       // remove this from DOM without a refresh...
+  //       this.setState({
+  //         display: false
+  //       });
+  //     }
+  //   }).catch(e => console.log(e))
+  // }
 
   render() {
     if (this.state.display === false) {
@@ -41,7 +41,9 @@ class Campers extends Component {
       return (
         <div className='user-card col-xs-12 col-md-6'>
           <CamperPhoto username={this.props.camper.username} />
-          <CamperInfo username={this.props.camper.username} interests={this.props.camper.interests} techSetup={this.state.techSetup} end={this.state.end} handleSubmit={this.handleSubmit} camper_id={this.props.camper_id}/>
+          <CamperInfo username={this.props.camper.username} interests={this.props.camper.interests}
+            techSetup={this.state.techSetup} end={this.state.end} handleSubmit={this.handleSubmit}
+            camper_id={this.props.camper._id} handleDelete={this.props.handleDelete}/>
         </div>
         );
     }

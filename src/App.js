@@ -44,6 +44,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.fetchData = this.fetchData.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentWillMount() {
@@ -84,6 +85,20 @@ class App extends Component {
     }
   }
 
+  handleDelete(id) {
+//     console.log(id);
+    const url = `${server}/api/v1/posts/${id}`;
+
+    axios.delete(url).then(res => {
+      if (res.status === 204) {
+        // this.setState({
+        //   campers: this.state.campers.filter(camper => camper._id !== id)
+        // });
+        this.fetchData();
+      }
+    }).catch(e => console.log(e))
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const post = {
@@ -110,8 +125,13 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader headerText="freeCodeCamp" appName="Remote Pairing Noticeboard" />
-        <AppBody campers={this.state.campers} showModal={showModal} onHide={this.close} handleSubmit={this.handleSubmit} handleChange={this.handleChange} username={this.state.username} availableTime={this.state.availableTime} interests={this.state.interests} showInfo={showInfo} openInfo={this.openInfo} close={this.close} open={this.open} modalSelections={pairingTechs}/>
-        <AppFooter open={this.open} openInfo={this.openInfo} />
+        <AppBody campers={this.state.campers} showModal={showModal} onHide={this.close}
+          handleSubmit={this.handleSubmit} handleChange={this.handleChange}
+          username={this.state.username} availableTime={this.state.availableTime}
+          interests={this.state.interests} showInfo={showInfo} openInfo={this.openInfo}
+          close={this.close} open={this.open} modalSelections={pairingTechs}
+          handleDelete={this.handleDelete}/>
+          <AppFooter open={this.open} openInfo={this.openInfo} />
       </div>
       );
   }
