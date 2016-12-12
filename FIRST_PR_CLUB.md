@@ -27,3 +27,6 @@ Oh, and: First!!!!!
 
 ---
 * [Kenchung1996](https://github.com/kenchung1996) Hi everyone! Thanks for having me, this is my first open-source project and I'm excited to help out.
+---
+* [DavidJaimesDesign](https://github.com/DavidJaimesDesign) Hello my fellow Red-Pandas! I have my front-end cert and I am working on the backend projects now. This is my first open source project! I am excited to contribute in any way I can! I am located in Los Angeles.
+---
