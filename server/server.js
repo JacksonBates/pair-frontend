@@ -46,10 +46,10 @@ app.post('/api/v1/:id', (req, res) => {
   for (let i in campers) {
     if (campers[i]._id == id) {
       campers.splice(i, 1);
-      return res.redirect('http://localhost:3000')
+      return res.redirect('http://localhost:3001')
     }
   }
-  res.redirect('http://localhost:3000')
+  res.redirect('http://localhost:3001')
 });
 
 // New route for delete button
