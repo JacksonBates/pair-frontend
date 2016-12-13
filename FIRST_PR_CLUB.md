@@ -24,3 +24,9 @@ Oh, and: First!!!!!
 
 ---
 * [NathanGell](https://github.com/NathanGell) Hey everyone! I'm from Melbourne. I have been working through the FCC curriculum for a while now. Learning React at the moment. I'm also experimenting with the Web Audio API. I'd like to integrate a messaging system to connect the pairers. I'm keen to start contributing to some open source projects and this looks like the perfect one to pop my cherry!!
+
+---
+* [Kenchung1996](https://github.com/kenchung1996) Hi everyone! Thanks for having me, this is my first open-source project and I'm excited to help out.
+---
+* [DavidJaimesDesign](https://github.com/DavidJaimesDesign) Hello my fellow Red-Pandas! I have my front-end cert and I am working on the backend projects now. This is my first open source project! I am excited to contribute in any way I can! I am located in Los Angeles.
+---

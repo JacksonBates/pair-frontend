@@ -6,6 +6,16 @@ I have never maintained a project before that has other contributors, so if thin
 
 The good news is, even the most beginner level contributor can feel right at home here - we are all beginners. If you've been thinking 'how can I find a beginner friendly opensource project to contribute to that still has a small codebase that won't overwhelm me' this is the project for you!
 
+## Table of Contents
+
+- [You will need](#you-will-need)
+- [Prefer a screencast?](#prefer-a-screencast)
+- [Getting started](#getting-started)
+- [Your first PR (Pull Request)](#your-first-pr-pull-request)
+- [How to sync your local repo with the original repo](#how-to-sync-your-local-repo-with-the-original-repo)
+- [Making real contributions](#making-real-contributions)
+
+
 ## You will need
 
 + A GitHub account
