@@ -30,3 +30,7 @@ Oh, and: First!!!!!
 ---
 * [DavidJaimesDesign](https://github.com/DavidJaimesDesign) Hello my fellow Red-Pandas! I have my front-end cert and I am working on the backend projects now. This is my first open source project! I am excited to contribute in any way I can! I am located in Los Angeles.
 ---
+[Ashenmaster](https://github.com/Ashenmaster)
+Location: London
+Experience: Work as a QA now going over basics of programming to get familiar.
+Hey all, just getting used to running with the PR process again.
