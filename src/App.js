@@ -20,6 +20,7 @@ class App extends Component {
       username: '',
       availableTime: '',
       setup: [],
+      otherSetup: '',
       interests: ''
     };
 
@@ -29,6 +30,7 @@ class App extends Component {
         username: '',
         availableTime: '',
         setup: [],
+        otherSetup: '',
         interests: ''
       });
     };
@@ -112,6 +114,7 @@ class App extends Component {
       username: this.state.username,
       availableTime: this.state.availableTime,
       setup: this.state.setup,
+      otherSetup: this.state.otherSetup,
       interests: this.state.interests
     }
     const url = `${server}/api/v1/posts`;
