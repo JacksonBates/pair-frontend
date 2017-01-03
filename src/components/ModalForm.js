@@ -9,7 +9,7 @@ const ModalForm = props => {
     <form onSubmit={props.handleSubmit}>
         <AddModalUsernameInput username={props.username} handleChange={props.handleChange} />
         <AddModalAvailableTimeInput availableTime={props.availableTime} handleChange={props.handleChange} />
-        <ModalSelectionList modalSelections={props.modalSelections}/>
+        <ModalSelectionList modalSelections={props.modalSelections} handleChange={props.handleChange}/>
         <AddModalTextInput name="setup" label="Other" value="" handleChange={props.handleChange} />
         <AddModalTextInput name="interests" label="Interests" value={props.interests} handleChange={props.handleChange} />
         <input className='btn btn-success modal-submit' type='submit' value='Submit' />
