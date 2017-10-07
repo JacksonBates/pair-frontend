@@ -1,6 +1,6 @@
 # How to contribute
 
-Firstly, thanks for taking an interset in this project! You are already an awesome person.
+Firstly, thanks for taking an interest in this project! You are already an awesome person.
 
 I have never maintained a project before that has other contributors, so if things get bumpy, we'll all try to remain patient and forgiving with each other.
 
