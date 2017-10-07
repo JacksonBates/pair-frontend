@@ -34,3 +34,6 @@ Oh, and: First!!!!!
 Location: London
 Experience: Work as a QA now going over basics of programming to get familiar.
 Hey all, just getting used to running with the PR process again.
+
+----
+pdcoded :: Long live Internet and OpenSouce !
